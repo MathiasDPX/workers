@@ -29,8 +29,10 @@ export default {
         const originalEncrypted = rc4EncryptToHex("gojs.net");
         const replacementEncrypted = rc4EncryptToHex(domain);
 
-        // Replace all occurrences
-        content = content.split(originalEncrypted).join(replacementEncrypted);
+        // Dont replace all occurences as `KF:"key"` was causing a mouse offset
+        content = content.replace(`m!==n("${originalEncrypted}")`, `m!==n("${replacementEncrypted}")`);
+        content = content.replace(`${originalEncrypted}"));this.bi`, `${replacementEncrypted}"));this.bi`);
+
         content = `// Go.JS for ${domain} (${replacementEncrypted})\n\n` + content;
 
         return new Response(content, {
