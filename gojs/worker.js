@@ -6,7 +6,9 @@ export default {
         let domain;
         const referer = request.headers.get("referer");
 
-        if (referer) {
+        if (url.searchParams.get('host')) {
+            domain = url.searchParams.get('host')
+        } else if (referer) {
             try {
                 domain = new URL(referer).hostname;
             } catch {
