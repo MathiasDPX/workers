@@ -9,3 +9,7 @@ Serves [go.js](https://gojs.net/latest/) while dynamically replacing `gojs.net` 
 ## Fallback
 
 Serves a static HTML page for all failing URLs
+
+## GBFS <small>(**G**eneral **B**ikeshare **F**eed **S**pecification)</small>
+
+GBFS proxy, mainly to bypass CORS
