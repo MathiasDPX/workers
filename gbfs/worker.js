@@ -1,5 +1,11 @@
 export default {
     async fetch(request) {
+        const corsHeaders = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Max-Age": "86400",
+        };
+                          
         const providers = {
             "landerneau": "https://gbfs.partners.fifteen.eu/gbfs/2.2/landerneau/en",
             "brest": "https://gbfs.partners.fifteen.eu/gbfs/2.2/brest/en"
@@ -36,6 +42,7 @@ export default {
         return new Response(content, {
             status: 200,
             headers: {
+                ...corsHeaders,
                 "Content-Type": "application/json",
             },
         });
