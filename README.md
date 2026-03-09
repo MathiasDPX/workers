@@ -13,3 +13,7 @@ Serves a static HTML page for all failing URLs
 ## GBFS <small>(**G**eneral **B**ikeshare **F**eed **S**pecification)</small>
 
 GBFS proxy, mainly to bypass CORS
+
+## cors-proxy
+
+CORS Proxy for all kinds of url
