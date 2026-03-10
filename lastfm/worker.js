@@ -10,7 +10,7 @@ function makeResponse(data, status = 200) {
 export default {
     async fetch(request, env, ctx) {
         const API_KEY = env.LASTFM_API_KEY;
-        const LASTFM_USERNAME = env.LAST_FM_USERNAME;
+        const LASTFM_USERNAME = env.LASTFM_USERNAME;
 
         const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USERNAME}&api_key=${API_KEY}&format=json&limit=1`);
         if (!res.ok) {
