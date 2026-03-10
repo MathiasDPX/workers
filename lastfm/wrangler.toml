@@ -1,5 +1,6 @@
 name = "lastfm"
 main = "worker.js"
+keep_vars = true
 compatibility_date = "2026-03-09"
 workers_dev = false
 preview_urls = false
