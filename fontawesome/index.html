@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FontAwesome CDN</title>
+    <style>
+        body {
+            width: 35em;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+            background-color: #1C1B22;
+            color: #FBFBFE;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, tr, td {
+            border: 1px solid #FBFBFE;
+            padding: 0.5em;
+        }
+
+        a {
+            color: #75B2EF;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FontAwesome CDN</h1>
+
+    <p>This is a Cloudflare Worker that gives you access to FontAwesome icons without paying nor importing their 5Gb
+        libraries</p>
+
+    <p>You can see all icon packs, families and styles on <a href="https://docs.fontawesome.com/web/dig-deeper/styles" target="_blank">Font Awesome Docs</a></p>
+
+    <h2>Query parameters</h2>
+    <table>
+        <tr>
+            <td><b>Parameter</b></td>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td><code>icon</code></td>
+            <td>Required</td>
+        </tr>
+        <tr>
+            <td><code>family</code></td>
+            <td>Family and style to use like <code>jelly-regular</code><br>Default: <code>solid</code></td>
+        </tr>
+        <tr>
+            <td><code>version</code></td>
+            <td>See <a href="https://fontawesome.com/changelog" target="_blank">Changelog</a> for versions<br>Default: <code>v7.3.0</code></td>
+        </tr>
+    </table>
+
+    <h2>From a <code>site-assets.fontawesome.com</code> URL</h2>
+
+    <pre>https://site-assets.fontawesome.com/releases/v7.3.0/svgs-full/vellum-solid/donut.svg</pre>
+
+    <p>In this example, the icon is <code>donut</code> with version <code>v7.3.0</code> using <code>vellum-solid</code>. Which make this URL:</p>
+
+    <pre>https://w.mathiasd.fr/fa/?icon=donut&family=vellum-solid&version=v7.3.0</pre>
+</body>
+</html>

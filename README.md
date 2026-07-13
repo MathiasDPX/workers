@@ -13,3 +13,7 @@ Serves a static HTML page for all failing URL
 ## cors-proxy
 
 CORS Proxy for all kinds of url
+
+## FontAwesome
+
+Serves [Font Awesome](https://fontawesome.com/) icons through their CDN `site-assets.fontawesome.com` by faking the `Origin` and `Referer`
