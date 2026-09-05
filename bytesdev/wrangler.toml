@@ -1,0 +1,4 @@
+name = "bytesdev-rss"
+main = "worker.js"
+compatibility_date = "2026-07-13"
+workers_dev = true
