@@ -8,9 +8,10 @@ export default {
         }
 
         const targetUrl = new URL(proxiedUrl);
+        const customHost = url.searchParams.get("host");
 
         const requestHeaders = new Headers(request.headers);
-        requestHeaders.set("Host", targetUrl.host);
+        requestHeaders.set("Host", customHost || targetUrl.host);
 
         const response = await fetch(proxiedUrl, {
             method: request.method,
