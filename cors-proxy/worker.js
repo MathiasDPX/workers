@@ -7,7 +7,17 @@ export default {
             return new Response("No URL", { status: 400 });
         }
 
-        const response = await fetch(proxiedUrl);
+        const targetUrl = new URL(proxiedUrl);
+
+        const requestHeaders = new Headers(request.headers);
+        requestHeaders.set("Host", targetUrl.host);
+
+        const response = await fetch(proxiedUrl, {
+            method: request.method,
+            headers: requestHeaders,
+            body: request.body,
+            redirect: "follow",
+        });
 
         const newHeaders = new Headers(response.headers);
         newHeaders.set("Access-Control-Allow-Origin", "*");
